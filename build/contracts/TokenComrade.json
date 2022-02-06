@@ -33,8 +33,7 @@
         }
       ],
       "stateMutability": "payable",
-      "type": "function",
-      "payable": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -52,8 +51,7 @@
       "name": "mint",
       "outputs": [],
       "stateMutability": "payable",
-      "type": "function",
-      "payable": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -15694,8 +15692,7 @@
     }
   },
   "schemaVersion": "3.4.4",
-  "updatedAt": "2022-02-06T18:25:45.921Z",
-  "networkType": "ethereum",
+  "updatedAt": "2022-02-06T21:50:20.372Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

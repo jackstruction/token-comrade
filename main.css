@@ -42,7 +42,10 @@ input, label{
     display:flex;
     justify-content: flex-end;
 }
-
+#web3authinfo{background-color: white;
+padding:10px;
+margin: 5px;
+border-radius: 2px;}
 /* END HEADER */
 
 

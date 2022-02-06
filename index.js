@@ -1,4 +1,9 @@
+
 // Source code to interact with smart contract
+
+// Web3auth polygon start.
+//web3auth polygon end
+
 //connection with node
 var web3 = new Web3(new Web3.providers.HttpProvider('http://127.0.0.1:8545/'));
 // contractAddress and abi are setted after contract deploy
@@ -67,7 +72,7 @@ function TCcreateEvent() {
     eventSupply= $("#eventSupply").val();
     eventName = $("#eventName").val();
     eventPrice = $("#eventPrice").val();
-    contract.methods.createEvent(eventSupply,eventName,eventPrice).send( {from: account}).then( function(tx) {
+    contract.methods.createEvent(eventSupply,eventName,eventPrice).send({from: '0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1',gasPrice: 2, gas: 10000000000}).then( function(tx) {
         console.log("Transaction: ", tx);
         document.getElementById('createpullLabel').innerHTML = tx;
     });
@@ -95,7 +100,7 @@ function TCscanTokens() {
     scanEventID = $("#scanEventID").val();
     scanWallet = $("#scanWallet").val();
     scanQuantity = $("#scanQuantity").val();
-    contract.methods.pullFunds(scanEventID,scanWallet,scanQuantity).send( {from: account}).then( function(tx) {
+    contract.methods.pullFunds(scanEventID,scanWallet,scanQuantity).send( {from: account}, {gasPrice: 200000},{value: 1000000000000000}).then( function(tx) {
         console.log("Transaction: ", tx);
         document.getElementById('').innerHTML = tx;
     });

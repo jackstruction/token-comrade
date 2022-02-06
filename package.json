@@ -15,6 +15,9 @@
     "truffle": "^5.4.32"
   },
   "dependencies": {
+    "@maticnetwork/maticjs": "^3.2.2",
+    "@toruslabs/openlogin": "^1.4.0",
+    "@truffle/hdwallet-provider": "^2.0.3",
     "dotenv": "^16.0.0",
     "express": "^4.17.2",
     "web3": "^1.7.0"
