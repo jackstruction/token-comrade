@@ -91,7 +91,6 @@ contract TokenComrade{
         require(e.redeemableBalance>0);
         e.organizer.transfer(e.redeemableBalance);
         e.redeemableBalance = 0;
-        //change to just the extra from events that are over.
     }
 
 }

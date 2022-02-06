@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+        <link rel="stylesheet" type="text/css" href="./main.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.7.0/dist/web3.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@web3auth/web3auth@0.2.2/dist/web3auth.umd.min.js"></script>
+      <!--<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+        <script src="../node_modules/web3/dist/web3.min.js"></script>-->
+        <script src="./index.js"></script>    
+    </head>
+<header>
+    <div id="header">
+        <div>
+            <div id="headerlogo">
+                <img id="headerlogoimg" src='./img/TCLogo1.png'/>
+            </div>
+            <div id="headerinfo">
+
+            </div>
+
+                <nav id="navigation" class='navbar'>
+                    <a href="#" class="nav navhome">Home</a>
+                    <a href="#mint" class="nav navmint">Mint</a>
+                    <a href="#admin" class="nav navadmin">Create</a>
+                    <a href="#scan" class="nav navscan">Scan</a>
+                    <a href="/marketplace/" class="nav navmarket">Market</a>
+                    <a href="#contact" class="nav navcontact">Contact</a>
+                </nav>
+    </div>
+</header>
+<body>
+<section id='mint' class="section mintsec">
+    <h1>Mint</h1>
+    <div class="row mintsecs">
+        <div class="left half"> 
+            <div>
+                <p>Search TokenComrade for any of your favorite concerts and maybe we'll have one someday</p></div>
+        </div>
+        <div class="right half">
+            <div>
+                <h2>Mint Event Tokens</h2><div>
+                <label for="mintEventID">Event ID</label>
+                <input placeholder="15" id="mintEventID"></div><div>
+                <label for="quantity">Number of Tokens</label>
+                <input placeholder="2" id="quantity"></div>
+                <button id="mintbutton" onclick="TCmint()" type="button">Mint Token</button>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<section id='admin' class="section display adminsec">
+    <h1>Create and Moderate</h1>
+    <div class="row adminsecs">
+        <div class="half">
+            <div class="createEvent">
+                <h2>Create Event</h2><div>
+                <label for="eventSupply">Quantity</label>
+                <input placeholder="50" id="eventSupply"></div><div>
+                <label for="eventName">Name</label>
+                <input placeholder="Little Bits Concert" id="eventName"></div><div>
+                <label for="eventPrice">Price (x.01 ETH)</label>
+                <input placeholder="50 equals .5 ETH" id="eventPrice"></div>
+                <button id="createEventButton" onclick="TCcreateEvent()" type="button">Create your own Event!</button>
+            </div>
+            <h2>Pull Event Funds</h2>
+            <label for="approveScanner">Event ID</label>
+            <input placeholder="15" id="approveScanner">
+            <button id="approveScannerButton" onclick="TCapproveScanner()" type="button">Withdraw Funds</button>
+            </div>
+            <label id="createpullLabel"></label>
+        <div class="half"> 
+            <div>
+                <h2>Add Scanner</h2>
+                <label for="approveScanner">Scanner Wallet</label>
+                <input placeholder="0x000000000000000000000000000" id="approveScanner">
+                <label for="addEventID">Event ID</label>
+                <input placeholder="Your Event ID Number" id="addEventID">
+                <button id="approveScannerButton" onclick="TCapproveScanner()" type="button">Add Scanner</button>
+                <h2>Remove Scanner</h2>
+                <label for="removeScanner">Scanner Wallet</label>
+                <input placeholder="0x000000000000000000000000000" id="removeScanner">
+                <label for="subEventID">Event ID</label>
+                <input placeholder="Your Event ID Number" id="subEventID">
+                <button id="removeScannerButton" href="#" onclick="TCremoveScanner()" type="button">Remove Scanner</button>
+                </div>
+            </div>
+            <label id="addsubLabel"></label>
+    </div>
+</section>
+<div class="">
+<section id='about' class="section row">
+    <div class="half aboutsec">
+        <h4>About</h4>
+        <img id="aboutimg" src="./img/header-bg.png">
+        <p>TokenComrade was created out of a need for a platform for anybody to digitally sell and verify tickets to their event.</p>
+    </div>
+    <div class="half scansec">
+        <h2>Scan A Ticket</h2>
+        <label for="scanEventID">Event ID</label>
+        <input placeholder="Event ID Number" id="scanEventID">
+        <label for="scanWallet">Holder Wallet</label>
+        <input placeholder="0x000000000000000000" id="scanWallet">
+        <label for="scanQuantity">Quantity</label>
+        <input placeholder="5" id="scanQuantity">
+        <button id="scanButton" href="#" onclick="TCScan()" type="button">Remove Scanner</button>
+    </div>
+</section>
+</div>
+</body>
+<footer class="row"><div class="half">
+<form><h3>Subscribe for Updates</h5>
+    <input placeholder="Email Address" id='signup' />
+    <button id="footerbutton" type="button" >Sign Up!</button> 
+    </form>
+</div>
+<div class="half">
+    <h3>Contact Us!</h3>
+    <div id='footeremail' class='center' ><a class='mailto' id="footeremaillink" href="mailto:info@jackstruction.com">info@jackstruction.com</a></div>
+</div>
+</footer>
+</html>

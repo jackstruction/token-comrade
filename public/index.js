@@ -1,4 +1,3 @@
-
 // Source code to interact with smart contract
 
 //connection with node
@@ -52,6 +51,7 @@ function TCapproveScanner() {
     addEventID = $("#addEventID").val();
     contract.methods.approveScanner(approveID, addEventID).send( {from: account}).then( function(tx) {
         console.log("Transaction: ", tx);
+        document.getElementById('addsubLabel').innerHTML = tx;
     });
     $("#approveScanner").val('');
 }
@@ -61,6 +61,7 @@ function TCremoveScanner() {
     subEventID = $("#subEventID").val();
     contract.methods.removeScanner().send(removeID, subEventID).send( {from: account}).then( function(tx) {
         console.log("Transaction: ", tx);
+        document.getElementById('addsubLabel').innerHTML = tx;
     });
 }
 // createEvent - Creates an event with a provided amount of people  
@@ -71,6 +72,7 @@ function TCcreateEvent() {
     eventPrice = $("#eventPrice").val();
     contract.methods.createEvent(eventSupply,eventName,eventPrice).send( {from: account}).then( function(tx) {
         console.log("Transaction: ", tx);
+        document.getElementById('createpullLabel').innerHTML = tx;
     });
 }
 // mint - Mints a token for an event 
@@ -80,6 +82,7 @@ function TCmint() {
     quantity = $("#quantity").val();
     contract.methods.mint(mintEventID,quantity).send( {from: account}).then( function(tx) {
         console.log("Transaction: ", tx);
+        document.getElementById('lastInfo').innerHTML = tx;
     });
 }
 // pullFunds - Pulls the funds for the event organizer. 
@@ -87,6 +90,7 @@ function TCpullFunds() {
     drawEventID = $("#drawEventID").val();
     contract.methods.pullFunds(drawEventID).send( {from: account}).then( function(tx) {
         console.log("Transaction: ", tx);
+        document.getElementById('createpullLabel').innerHTML = tx;    
     });
 }
 // scan - confirms the user is who they say they are. 
@@ -96,6 +100,7 @@ function TCscanTokens() {
     scanQuantity = $("#scanQuantity").val();
     contract.methods.pullFunds(scanEventID,scanWallet,scanQuantity).send( {from: account}).then( function(tx) {
         console.log("Transaction: ", tx);
+        document.getElementById('').innerHTML = tx;
     });
     
 }

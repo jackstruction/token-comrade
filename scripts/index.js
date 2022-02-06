@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = async function main (callback) {
     try {
         // Our code will go here
