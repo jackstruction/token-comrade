@@ -8,13 +8,14 @@
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.7.0/dist/web3.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@web3auth/web3auth@0.2.2/dist/web3auth.umd.min.js"></script>
-      <!--<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
-        <script src="../node_modules/web3/dist/web3.min.js"></script>-->
-        <script src="./index.js"></script>    
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+        <script src="../node_modules/web3/dist/web3.min.js"></script>
+      <script src="./index.js"></script>
+      <script src="./index2.js"></script>
     </head>
 <header>
     <div id="header">
-        <div>
+        <div><button id="login">Login</button><button id="logout">Logout</button><label id="loginText"></label>
             <div id="headerlogo">
                 <img id="headerlogoimg" src='./img/TCLogo1.png'/>
             </div>
@@ -71,8 +72,9 @@
             <label for="approveScanner">Event ID</label>
             <input placeholder="15" id="approveScanner">
             <button id="approveScannerButton" onclick="TCapproveScanner()" type="button">Withdraw Funds</button>
-            </div>
             <label id="createpullLabel"></label>
+            </div>
+            
         <div class="half"> 
             <div>
                 <h2>Add Scanner</h2>
@@ -87,9 +89,10 @@
                 <label for="subEventID">Event ID</label>
                 <input placeholder="Your Event ID Number" id="subEventID">
                 <button id="removeScannerButton" href="#" onclick="TCremoveScanner()" type="button">Remove Scanner</button>
+                <label id="addsubLabel"></label>
                 </div>
             </div>
-            <label id="addsubLabel"></label>
+            
     </div>
 </section>
 <div class="">
